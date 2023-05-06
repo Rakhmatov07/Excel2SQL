@@ -8,7 +8,6 @@ database = input('Create new database(ex:example.db):')
 
 
 def import_excel2sqlite(excel_file, database):
-    print("Hello")
     df = pandas.read_excel(excel_file, header=0)
     connection = sqlite3.connect(database)
     df.to_sql(
